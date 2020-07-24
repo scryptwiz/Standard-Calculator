@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="Top-Color">
+			<div id="operation">
+				
+			</div>
+			<div id="display">
+				
+			</div>
+		</div>
+		<div class="Calculaton-part">
+			<div class="the-Operator">
+				<div class="first-row">
+				<button class="Operator" onclick="clean ()">AC</button>
+				<input type="button" name="" value="DEL" class="Operator" onclick="del()">
+				<button class="Operator" onclick="swison()" id="on">ON</button>
+			</div>
+			<div class="first-row">
+				<input type="button" name="" value="7" onclick="num(7)">
+				<input type="button" name="" value="8" onclick="num(8)">
+				<input type="button" name="" value="9" onclick="num(9)">
+				<input type="button" name="" value="+" class="Operator" onclick="sign('+')">
+			</div>
+			<div class="second-row">
+				<input type="button" name="" value="6" onclick="num(6)">
+				<input type="button" name="" value="5" onclick="num(5)">
+				<input type="button" name="" value="4" onclick="num(4)">
+				<input type="button" name="" value="-" class="Operator" onclick="sign('-')">
+			</div>
+			<div class="third-row">
+				<input type="button" name="" value="3" onclick="num(3)">
+				<input type="button" name="" value="2" onclick="num(2)">
+				<input type="button" name="" value="1" onclick="num(1)">
+				<input type="button" name="" value="*" class="Operator" onclick="sign('*')">
+			</div>
+			<div class="last-row">
+				<input type="button" name="" value="0" onclick="num(0)">
+				<input type="button" name="" value="." onclick="sign('.')">
+				<input type="button" name="" value="/" onclick="sign('/')">
+				<input type="button" name="" value="=" class="Operator" onclick="equal()">
+			</div>
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		function num(kelvin) {
+			var digit = kelvin;
+			operation.innerHTML += digit;
+		}
+
+		function sign(signal) {
+			var sign = signal;
+			operation.innerHTML += sign;
+		}
+
+		function equal() {
+			var k = operation.innerHTML;
+			var g = eval(k);
+			display.innerHTML = g;
+		}
+
+		function clean(){
+			display.innerHTML = "";
+			operation.innerHTML = "";
+		}
+
+		var swis = on;
+		if (swis.innerHTML == "ON") {
+			operation.style.display = "none"
+			display.style.display = "none"
+		}
+
+		function swison() {
+			if (swis.innerHTML == "ON") {
+				swis.innerHTML = "OFF"
+				operation.style.display = "block"
+				display.style.display = "block"
+				operation.innerHTML = ""
+				display.innerHTML = ""
+			} else {
+				swis.innerHTML = "ON"
+				operation.style.display = "none"
+				display.style.display = "none"
+				operation.innerHTML = " "
+				display.innerHTML = " "
+			}
+
+		}
+
+		function del () {
+			operation.innerHTML = operation.innerHTML.substr(0,operation.innerHTML.length-1)
+		}
+
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin-top: 4%;
+	margin-left: 35%;
+}
+
+.Top-Color {
+	background-color: gold;
+	width: 350px;
+	height: 150px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.Calculaton-part {
+	background-color: #bdbdbd;
+	width: 350px;
+	height: 420px;
+	border-radius: 0px 0px 20px 20px;
+}
+
+#display {
+	width: 320px;
+	height: 50px;	
+	color: #000;
+	text-align: right;
+	font-size: 24px;
+	margin-right: 20px;
+	font-family: sans-serif;
+	position: relative;
+	top: 80px;
+
+}
+
+.the-Operator {
+	padding-top: 10px;
+}
+
+input {
+	outline: none;
+}
+
+button {
+	outline: none;
+}
+
+#operation {
+	width: 330px;
+	max-width: 330px;
+	min-width: 330px;
+	text-align: left;	
+	font-family: sans-serif;
+	color: #000;
+	margin-left: 10px;
+	font-size: 24px;
+	top: 20px;
+	position: relative;
+	overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    height: 1px;
+	}
+
+.first-row input, button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 0px;
+	margin: 15px;
+	font-size: 20px;
+}
+
+.second-row input {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 0px;
+	margin: 15px;
+	font-size: 20px;
+}
+
+.third-row input {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 0px;
+	margin: 15px;
+	font-size: 20px;
+}
+
+.last-row input {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 0px;
+	margin: 15px;
+	font-size: 20px;
+}
+
+.Operator, button {
+	background-color: green;
+	color: white;
+}
